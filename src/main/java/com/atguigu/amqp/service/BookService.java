@@ -5,6 +5,8 @@ import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+
 @Service
 public class BookService {
 
@@ -15,7 +17,11 @@ public class BookService {
 
     @RabbitListener(queues = "gulixueyuan.news")
     public void receive02(Message message){
-        System.out.println(message.getBody());
+        System.out.println(Arrays.toString(message.getBody()));
         System.out.println(message.getMessageProperties());
+    }
+
+    public void receive03(){
+        System.out.println("test");
     }
 }
