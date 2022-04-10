@@ -24,4 +24,9 @@ public class BookService {
     public void receive03(){
         System.out.println("test");
     }
+
+    public void receive04(){
+        System.out.println("test");
+    }
+
 }
